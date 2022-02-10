@@ -1,0 +1,19 @@
+{
+  "name": "kirichannel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@line/bot-sdk": "^7.4.0",
+    "axios": "^0.25.0",
+    "express": "^4.17.2",
+    "request": "^2.88.2"
+  }
+}
