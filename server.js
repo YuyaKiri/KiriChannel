@@ -5,7 +5,7 @@ const line = require('@line/bot-sdk');
 const request = require('request');
 
 const NEW_LINE = '\n';
-const LINE_MESSAGE_MAX_LENGTH = 2000;
+const LINE_MESSAGE_MAX_LENGTH = 000;
 
 // create LINE SDK config from env variables
 const config = {
