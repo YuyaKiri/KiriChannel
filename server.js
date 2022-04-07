@@ -30,7 +30,8 @@ app.post('/webhook', line.middleware(config), (req, res) => {
     });
 });
 
-// Process in Linebot*******************************************************
+
+// Process in Linebot
 function handleEvent(event) {
 
   console.log('handleEvent()');
@@ -63,9 +64,10 @@ function handleEvent(event) {
     text: message
   });
 }
-//****************************************************************************
+//*****************************************************************************
 
-// Define lookUpWords**********************************************************
+
+// Define lookUpWords
 const lookUpWords = async (userId, word) => {
 
   console.log('lookUpWords()');
@@ -159,7 +161,8 @@ const lookUpWords = async (userId, word) => {
 }
 //*****************************************************************************
 
-// listen on port*************************************************************/
+
+// listen on port
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`listening on ${port}`);
