@@ -5,7 +5,7 @@ const line = require('@line/bot-sdk');
 const request = require('request');
 
 const NEW_LINE = '\n';
-const LINE_MESSAGE_MAX_LENGTH = 000;
+const LINE_MESSAGE_MAX_LENGTH = 2000;
 
 // create LINE SDK config from env variables
 const config = {
@@ -30,8 +30,7 @@ app.post('/webhook', line.middleware(config), (req, res) => {
     });
 });
 
-
-// Process in Linebot
+// Process in Linebot*******************************************************
 function handleEvent(event) {
 
   console.log('handleEvent()');
@@ -64,10 +63,9 @@ function handleEvent(event) {
     text: message
   });
 }
-//*******************************************************************
+//****************************************************************************
 
-
-// Define lookUpWords
+// Define lookUpWords**********************************************************
 const lookUpWords = async (userId, word) => {
 
   console.log('lookUpWords()');
@@ -159,10 +157,9 @@ const lookUpWords = async (userId, word) => {
   });
 }).setMaxListeners(10);
 }
-//**********************************************************************
+//*****************************************************************************
 
-
-// listen on port
+// listen on port*************************************************************/
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`listening on ${port}`);
